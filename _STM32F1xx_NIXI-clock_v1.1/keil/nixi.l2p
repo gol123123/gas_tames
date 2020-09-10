@@ -1,0 +1,5 @@
+--cpu Cortex-M3 "main.o" "chrtclib.o" "board.o" "nvic.o" "chcore.o" "chcore_v7m.o" ".\chcoreasm_v7m.o" ".\cstartup.o" ".\vectors.o" "chcond.o" "chdebug.o" "chdynamic.o" "chevents.o" "chheap.o" "chlists.o" "chmboxes.o" "chmemcore.o" "chmempools.o" "chmsg.o" "chmtx.o" "chqueues.o" "chregistry.o" "chschd.o" "chsem.o" "chsys.o" "chthreads.o" "chvt.o" "adc.o" "can.o" "ext.o" "gpt.o" "hal.o" "i2c.o" "icu.o" "mac.o" "mmc_spi.o" "mmcsd.o" "pal.o" "pwm.o" "rtc.o" "sdc.o" "serial.o" "serial_usb.o" "spi.o" "tm.o" "uart.o" "usb.o" "can_lld.o" "ext_lld.o" "i2s_lld.o" "mac_lld.o" "sdc_lld.o" "pal_lld.o" "i2c_lld.o" "usb_lld.o" "rtc_lld.o" "spi_lld.o" "gpt_lld.o" "icu_lld.o" "pwm_lld.o" "serial_lld.o" "uart_lld.o" "adc_lld.o" "ext_lld_isr.o" "hal_lld.o" "stm32_dma.o" "tmp75.o" "i2c_pns.o" 
+--strict --scatter "nixi.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\nixi.map" -o nixi.axf
