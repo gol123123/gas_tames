@@ -1,0 +1,176 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Linear:LM317_TO39 U?
+U 1 1 5F6FD0DB
+P 2850 2300
+F 0 "U?" H 2850 2542 50  0000 C CNN
+F 1 "LM317_TO39" H 2850 2451 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 2850 2525 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 2850 2300 50  0001 C CNN
+	1    2850 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F6FD52E
+P 2200 2700
+F 0 "C?" H 2315 2746 50  0000 L CNN
+F 1 "0.1u" H 2315 2655 50  0000 L CNN
+F 2 "" H 2238 2550 50  0001 C CNN
+F 3 "~" H 2200 2700 50  0001 C CNN
+	1    2200 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2300 2200 2300
+Wire Wire Line
+	2200 2300 2200 2550
+Wire Wire Line
+	2200 2300 1850 2300
+Connection ~ 2200 2300
+$Comp
+L Device:R R?
+U 1 1 5F6FDD41
+P 3400 2550
+F 0 "R?" H 3470 2596 50  0000 L CNN
+F 1 "4k" H 3470 2505 50  0000 L CNN
+F 2 "" V 3330 2550 50  0001 C CNN
+F 3 "~" H 3400 2550 50  0001 C CNN
+	1    3400 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F6FE7C3
+P 3400 3000
+F 0 "R?" H 3470 3046 50  0000 L CNN
+F 1 "11k" H 3470 2955 50  0000 L CNN
+F 2 "" V 3330 3000 50  0001 C CNN
+F 3 "~" H 3400 3000 50  0001 C CNN
+	1    3400 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2700 3400 2800
+Wire Wire Line
+	3150 2300 3400 2300
+Wire Wire Line
+	3400 2300 3400 2400
+Wire Wire Line
+	2850 2600 2850 2800
+Wire Wire Line
+	2850 2800 3400 2800
+Connection ~ 3400 2800
+Wire Wire Line
+	3400 2800 3400 2850
+Wire Wire Line
+	3400 2300 3850 2300
+Connection ~ 3400 2300
+$Comp
+L Device:C C?
+U 1 1 5F6FED43
+P 4300 2600
+F 0 "C?" H 4415 2646 50  0000 L CNN
+F 1 "1u" H 4415 2555 50  0000 L CNN
+F 2 "" H 4338 2450 50  0001 C CNN
+F 3 "~" H 4300 2600 50  0001 C CNN
+	1    4300 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F6FF3D9
+P 3850 3000
+F 0 "C?" H 3965 3046 50  0000 L CNN
+F 1 "10u" H 3965 2955 50  0000 L CNN
+F 2 "" H 3888 2850 50  0001 C CNN
+F 3 "~" H 3850 3000 50  0001 C CNN
+	1    3850 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4002 D?
+U 1 1 5F6FFC12
+P 3850 2550
+F 0 "D?" V 3896 2470 50  0000 R CNN
+F 1 "1N4002" V 3805 2470 50  0000 R CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3850 2375 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3850 2550 50  0001 C CNN
+	1    3850 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3850 2300 3850 2400
+Connection ~ 3850 2300
+Wire Wire Line
+	3850 2300 4300 2300
+Wire Wire Line
+	3850 2700 3850 2850
+Wire Wire Line
+	4300 2300 4300 2450
+Connection ~ 4300 2300
+$Comp
+L power:GND #PWR?
+U 1 1 5F700F31
+P 3850 3150
+F 0 "#PWR?" H 3850 2900 50  0001 C CNN
+F 1 "GND" H 3855 2977 50  0000 C CNN
+F 2 "" H 3850 3150 50  0001 C CNN
+F 3 "" H 3850 3150 50  0001 C CNN
+	1    3850 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F7013A4
+P 3400 3150
+F 0 "#PWR?" H 3400 2900 50  0001 C CNN
+F 1 "GND" H 3405 2977 50  0000 C CNN
+F 2 "" H 3400 3150 50  0001 C CNN
+F 3 "" H 3400 3150 50  0001 C CNN
+	1    3400 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F7017AB
+P 2200 2850
+F 0 "#PWR?" H 2200 2600 50  0001 C CNN
+F 1 "GND" H 2205 2677 50  0000 C CNN
+F 2 "" H 2200 2850 50  0001 C CNN
+F 3 "" H 2200 2850 50  0001 C CNN
+	1    2200 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F701B1B
+P 4300 2750
+F 0 "#PWR?" H 4300 2500 50  0001 C CNN
+F 1 "GND" H 4305 2577 50  0000 C CNN
+F 2 "" H 4300 2750 50  0001 C CNN
+F 3 "" H 4300 2750 50  0001 C CNN
+	1    4300 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 2300 4700 2300
+Text GLabel 1850 2300 0    50   Input ~ 0
+Vo
+Text GLabel 4700 2300 2    50   Input ~ 0
+питание_мк
+$EndSCHEMATC

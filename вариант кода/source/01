@@ -1,0 +1,86 @@
+// USART Receiver buffer
+#define RX_BUFFER_SIZE 16
+char rx_buffer[RX_BUFFER_SIZE];
+
+#if RX_BUFFER_SIZE <= 256
+unsigned char rx_wr_index,rx_rd_index,rx_counter;
+#else
+unsigned int rx_wr_index,rx_rd_index,rx_counter;
+#endif
+
+// This flag is set on USART Receiver buffer overflow
+bit rx_buffer_overflow;
+
+// USART Receiver interrupt service routine
+interrupt [USART_RXC] void usart_rx_isr(void)
+{
+char status,data;
+status=UCSRA;
+data=UDR;
+if ((status & (FRAminutG_ERROR | PARITY_ERROR | DATA_OVERRUN))==0)
+   {
+   rx_buffer[rx_wr_index++]=data;
+#if RX_BUFFER_SIZE == 256
+   // special case for receiver buffer size=256
+   if (++rx_counter == 0)
+      {
+#else
+   if (rx_wr_index == RX_BUFFER_SIZE) rx_wr_index=0;
+   if (++rx_counter == RX_BUFFER_SIZE)
+      {
+      rx_counter=0;
+#endif
+      rx_buffer_overflow=1;
+      }
+   }
+}
+
+
+
+
+
+if (rx_counter)			//???? ???-?? ???????? ?? ?????
+		{	
+		byte0 = byte1 = byte2 = byte3 = byte4 = byte5 = byte6 = byte7 = 0;
+                byte0 = my_getchar();
+		
+                
+			        led_b_on();
+                                //byte3 = my_getchar();
+                                if (byte0 == 'T')
+                                	{
+                                        delay_ms(100);
+                                        for(i=0;i<20;i++) data[i] = 0;	// ??????????  
+                                        i=0;
+                                        while (rx_counter) {data[i] = my_getchar(); i++;};	// ????????? ?????? ? ??????
+                                        crc = Crc16 (data, i-4);	// ????????? ??????????? ?????
+                                        sprintf(crc_buf, "%04X", crc);  // ????????? ? ???????? ?????? ??? ???????? ?????????
+
+                                        if (i == 10 && data[i-4] == crc_buf[0] && data[i-3] == crc_buf[1] && data[i-2] == crc_buf[2] && data[i-1] == crc_buf[3])
+                                                {
+                                                for (j=0;j<i;j++) data[j] = data[j] - 0x30;	// ?????? ?? ASCII-????? ?????
+                                                byte4 = data[0]*10 + data[1];
+                                                byte5 = data[2]*10 + data[3];
+                                                byte6 = data[4]*10 + data[5];
+                                                if (byte4 <= 23 && byte5 <= 59 && byte6 <= 59)
+                                                        {
+                                                        #asm("cli");                                    // ????????? ??????????
+                                                        i2c_stop();                                     // ?????????? ?????, ???? ?? ????????? ? ???????? ?????
+                                                        i2c_stop();
+                                                        i2c_stop();
+                                                        i2c_stop();                                     // ?????????? ?????, ???? ?? ????????? ? ???????? ?????
+                                                        i2c_stop();
+                                                        i2c_stop();
+                                                        rtc_set_time(byte4, byte5, byte6);                     // ?????????? ????? ? RTC
+                                                        rtc_set_time(byte4, byte5, byte6);                     // ?????????? ????? ? RTC
+                                                        rtc_set_time(byte4, byte5, byte6);                     // ?????????? ????? ? RTC
+                                                        rtc_get_time();
+                                                        time_load = 17;                                 // ?????????? ????????? ????? ??? ?????? ??????????, ? ?? DS-?? ????? ????
+                                                        out_cycle = 7;
+                                                        global_mode = clock_mode;                       // ????????????? ? ????? ???????????
+                                                        #asm("sei");
+                                                        putchar ('O');
+                                                        putchar ('K');
+                                                        }
+                                                }
+                                        }

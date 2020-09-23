@@ -1,0 +1,376 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 5F6A6CE3
+P 15150 -2500
+F 0 "BT?" H 15268 -2404 50  0000 L CNN
+F 1 "Battery_Cell" H 15268 -2495 50  0000 L CNN
+F 2 "" V 15150 -2440 50  0001 C CNN
+F 3 "~" V 15150 -2440 50  0001 C CNN
+	1    15150 -2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F6A72A8
+P 15150 -2400
+F 0 "#PWR?" H 15150 -2650 50  0001 C CNN
+F 1 "GND" H 15155 -2573 50  0000 C CNN
+F 2 "" H 15150 -2400 50  0001 C CNN
+F 3 "" H 15150 -2400 50  0001 C CNN
+	1    15150 -2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRLML6402 Q?
+U 1 1 5F6A77E7
+P 16000 -2600
+F 0 "Q?" V 16342 -2600 50  0000 C CNN
+F 1 "IRLML6402" V 16251 -2600 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 16200 -2675 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 16000 -2600 50  0001 L CNN
+	1    16000 -2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_FET:IRLML6402 Q?
+U 1 1 5F6AAB2D
+P 16550 -2600
+F 0 "Q?" V 16892 -2600 50  0000 C CNN
+F 1 "IRLML6402" V 16801 -2600 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 16750 -2675 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 16550 -2600 50  0001 L CNN
+	1    16550 -2600
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	15150 -2700 15700 -2700
+Wire Wire Line
+	16000 -2400 16550 -2400
+Wire Wire Line
+	16200 -2700 16350 -2700
+$Comp
+L Device:R R?
+U 1 1 5F6AD510
+P 15700 -2550
+F 0 "R?" H 15770 -2504 50  0000 L CNN
+F 1 "200k " H 15770 -2595 50  0000 L CNN
+F 2 "" V 15630 -2550 50  0001 C CNN
+F 3 "~" H 15700 -2550 50  0001 C CNN
+	1    15700 -2550
+	1    0    0    -1  
+$EndComp
+Connection ~ 15700 -2700
+Wire Wire Line
+	15700 -2700 15800 -2700
+Wire Wire Line
+	16000 -2400 15700 -2400
+Connection ~ 16000 -2400
+Wire Wire Line
+	16550 -2400 17000 -2400
+Wire Wire Line
+	17000 -2400 17000 -3350
+Wire Wire Line
+	17000 -3350 17050 -3350
+Connection ~ 16550 -2400
+$Comp
+L Diode:BAT54C D?
+U 1 1 5F6AEBD6
+P 17250 -3350
+F 0 "D?" V 17204 -3262 50  0000 L CNN
+F 1 "BAT54C" V 17295 -3262 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 17325 -3225 50  0001 L CNN
+F 3 "http://www.diodes.com/_files/datasheets/ds11005.pdf" H 17170 -3350 50  0001 C CNN
+	1    17250 -3350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F6B2882
+P 17250 -3050
+F 0 "#PWR?" H 17250 -3300 50  0001 C CNN
+F 1 "GND" H 17255 -3223 50  0000 C CNN
+F 2 "" H 17250 -3050 50  0001 C CNN
+F 3 "" H 17250 -3050 50  0001 C CNN
+	1    17250 -3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12C #PWR?
+U 1 1 5F6B2F45
+P 17250 -3650
+F 0 "#PWR?" H 17250 -3800 50  0001 C CNN
+F 1 "+12C" H 17265 -3477 50  0000 C CNN
+F 2 "" H 17250 -3650 50  0001 C CNN
+F 3 "" H 17250 -3650 50  0001 C CNN
+	1    17250 -3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F6B342E
+P 16550 -2250
+F 0 "R?" H 16620 -2204 50  0000 L CNN
+F 1 "10k " H 16620 -2295 50  0000 L CNN
+F 2 "" V 16480 -2250 50  0001 C CNN
+F 3 "~" H 16550 -2250 50  0001 C CNN
+	1    16550 -2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT54C D?
+U 1 1 5F6B5B7D
+P 18000 -3350
+F 0 "D?" V 17954 -3262 50  0000 L CNN
+F 1 "BAT54C" V 18045 -3262 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 18075 -3225 50  0001 L CNN
+F 3 "http://www.diodes.com/_files/datasheets/ds11005.pdf" H 17920 -3350 50  0001 C CNN
+	1    18000 -3350
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F6B5B87
+P 18000 -3050
+F 0 "#PWR?" H 18000 -3300 50  0001 C CNN
+F 1 "GND" H 18005 -3223 50  0000 C CNN
+F 2 "" H 18000 -3050 50  0001 C CNN
+F 3 "" H 18000 -3050 50  0001 C CNN
+	1    18000 -3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12C #PWR?
+U 1 1 5F6B5B91
+P 18000 -3650
+F 0 "#PWR?" H 18000 -3800 50  0001 C CNN
+F 1 "+12C" H 18015 -3477 50  0000 C CNN
+F 2 "" H 18000 -3650 50  0001 C CNN
+F 3 "" H 18000 -3650 50  0001 C CNN
+	1    18000 -3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	16750 -2700 17750 -2700
+Wire Wire Line
+	18200 -3350 18200 -2700
+Connection ~ 18200 -2700
+$Comp
+L Device:R R?
+U 1 1 5F6BC7C3
+P 17750 -2550
+F 0 "R?" H 17820 -2504 50  0000 L CNN
+F 1 "10k " H 17820 -2595 50  0000 L CNN
+F 2 "" V 17680 -2550 50  0001 C CNN
+F 3 "~" H 17750 -2550 50  0001 C CNN
+	1    17750 -2550
+	1    0    0    -1  
+$EndComp
+Connection ~ 17750 -2700
+Wire Wire Line
+	17750 -2700 18200 -2700
+$Comp
+L Device:R R?
+U 1 1 5F6BD183
+P 17750 -2250
+F 0 "R?" H 17820 -2204 50  0000 L CNN
+F 1 "10k " H 17820 -2295 50  0000 L CNN
+F 2 "" V 17680 -2250 50  0001 C CNN
+F 3 "~" H 17750 -2250 50  0001 C CNN
+	1    17750 -2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F6BD9E0
+P 17750 -2100
+F 0 "#PWR?" H 17750 -2350 50  0001 C CNN
+F 1 "GND" H 17755 -2273 50  0000 C CNN
+F 2 "" H 17750 -2100 50  0001 C CNN
+F 3 "" H 17750 -2100 50  0001 C CNN
+	1    17750 -2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F6BDFFA
+P 18100 -2200
+F 0 "C?" H 18215 -2154 50  0000 L CNN
+F 1 "100n" H 18215 -2245 50  0000 L CNN
+F 2 "" H 18138 -2350 50  0001 C CNN
+F 3 "~" H 18100 -2200 50  0001 C CNN
+	1    18100 -2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	17750 -2400 18100 -2400
+Wire Wire Line
+	18100 -2400 18100 -2350
+Connection ~ 17750 -2400
+$Comp
+L power:GND #PWR?
+U 1 1 5F6BE896
+P 18100 -2050
+F 0 "#PWR?" H 18100 -2300 50  0001 C CNN
+F 1 "GND" H 18105 -2223 50  0000 C CNN
+F 2 "" H 18100 -2050 50  0001 C CNN
+F 3 "" H 18100 -2050 50  0001 C CNN
+	1    18100 -2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	18100 -2400 18400 -2400
+Connection ~ 18100 -2400
+Wire Wire Line
+	18200 -2700 18950 -2700
+Wire Wire Line
+	16550 -1700 16150 -1700
+Wire Wire Line
+	16550 -2100 16550 -1700
+$Comp
+L Transistor_FET:BSS123 Q?
+U 1 1 5F6C0513
+P 16050 -1500
+F 0 "Q?" H 16254 -1454 50  0000 L CNN
+F 1 "BSS123" H 16254 -1545 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 16250 -1575 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds30366.pdf" H 16050 -1500 50  0001 L CNN
+	1    16050 -1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15850 -1500 15650 -1500
+$Comp
+L power:GND #PWR?
+U 1 1 5F6C35D5
+P 16150 -1300
+F 0 "#PWR?" H 16150 -1550 50  0001 C CNN
+F 1 "GND" H 16155 -1473 50  0000 C CNN
+F 2 "" H 16150 -1300 50  0001 C CNN
+F 3 "" H 16150 -1300 50  0001 C CNN
+	1    16150 -1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	16550 -1700 16550 -850
+Wire Wire Line
+	16550 -850 16200 -850
+Connection ~ 16550 -1700
+$Comp
+L Device:CircuitBreaker_1P CB?
+U 1 1 5F6C5FE0
+P 15850 -850
+F 0 "CB?" V 15585 -850 50  0000 C CNN
+F 1 "CircuitBreaker_1P" V 15676 -850 50  0000 C CNN
+F 2 "" H 15850 -850 50  0001 C CNN
+F 3 "~" H 15850 -850 50  0001 C CNN
+	1    15850 -850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F6C6C88
+P 16200 -700
+F 0 "C?" H 16315 -654 50  0000 L CNN
+F 1 "100n" H 16315 -745 50  0000 L CNN
+F 2 "" H 16238 -850 50  0001 C CNN
+F 3 "~" H 16200 -700 50  0001 C CNN
+	1    16200 -700
+	1    0    0    -1  
+$EndComp
+Connection ~ 16200 -850
+Wire Wire Line
+	16200 -850 16150 -850
+$Comp
+L power:GND #PWR?
+U 1 1 5F6C73C9
+P 16200 -550
+F 0 "#PWR?" H 16200 -800 50  0001 C CNN
+F 1 "GND" H 16205 -723 50  0000 C CNN
+F 2 "" H 16200 -550 50  0001 C CNN
+F 3 "" H 16200 -550 50  0001 C CNN
+	1    16200 -550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F6C7CD5
+P 15550 -850
+F 0 "#PWR?" H 15550 -1100 50  0001 C CNN
+F 1 "GND" H 15555 -1023 50  0000 C CNN
+F 2 "" H 15550 -850 50  0001 C CNN
+F 3 "" H 15550 -850 50  0001 C CNN
+	1    15550 -850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F6C87EF
+P 15650 -1350
+F 0 "R?" H 15720 -1304 50  0000 L CNN
+F 1 "10k " H 15720 -1395 50  0000 L CNN
+F 2 "" V 15580 -1350 50  0001 C CNN
+F 3 "~" H 15650 -1350 50  0001 C CNN
+	1    15650 -1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15650 -1500 15300 -1500
+Connection ~ 15650 -1500
+$Comp
+L power:GND #PWR?
+U 1 1 5F6C9650
+P 15650 -1200
+F 0 "#PWR?" H 15650 -1450 50  0001 C CNN
+F 1 "GND" H 15655 -1373 50  0000 C CNN
+F 2 "" H 15650 -1200 50  0001 C CNN
+F 3 "" H 15650 -1200 50  0001 C CNN
+	1    15650 -1200
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 950  1100 1700 1500
+U 5F6C9CC0
+F0 "входное напряжение" 50
+F1 "file5F6C9CBF.sch" 50
+F2 "Vo" O R 2650 1450 50 
+$EndSheet
+$Sheet
+S 3350 1150 1950 1500
+U 5F6FC383
+F0 "напряжение микроконтролерра" 50
+F1 "file5F6FC382.sch" 50
+F2 "Vo" I L 3350 1450 50 
+$EndSheet
+$Sheet
+S 3350 3050 1950 1500
+U 5F6FC99B
+F0 "напряжение генератора для индикатора " 50
+F1 "file5F6FC99A.sch" 50
+$EndSheet
+Wire Wire Line
+	2650 1450 2850 1450
+Text HLabel 3400 3200 0    50   Input ~ 0
+Vo
+Wire Wire Line
+	2850 1450 2850 3200
+Wire Wire Line
+	2850 3200 3400 3200
+Connection ~ 2850 1450
+Wire Wire Line
+	2850 1450 3350 1450
+$EndSCHEMATC

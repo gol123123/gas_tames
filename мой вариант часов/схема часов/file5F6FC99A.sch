@@ -1,0 +1,289 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:MC34063AP U?
+U 1 1 5F70A511
+P 3400 2800
+F 0 "U?" H 3400 3267 50  0000 C CNN
+F 1 "MC34063AP" H 3400 3176 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 3450 2350 50  0001 L CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/MC34063A-D.PDF" H 3900 2700 50  0001 C CNN
+	1    3400 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F70AADB
+P 2800 3200
+F 0 "C?" H 2915 3246 50  0000 L CNN
+F 1 "1n" H 2915 3155 50  0000 L CNN
+F 2 "" H 2838 3050 50  0001 C CNN
+F 3 "~" H 2800 3200 50  0001 C CNN
+	1    2800 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3000 2800 3000
+Wire Wire Line
+	2800 3000 2800 3050
+Wire Wire Line
+	2800 3350 3400 3350
+Wire Wire Line
+	3400 3350 3400 3300
+Wire Wire Line
+	3400 3350 3400 3400
+Connection ~ 3400 3350
+$Comp
+L power:GND #PWR?
+U 1 1 5F70B1DE
+P 3400 3400
+F 0 "#PWR?" H 3400 3150 50  0001 C CNN
+F 1 "GND" H 3405 3227 50  0000 C CNN
+F 2 "" H 3400 3400 50  0001 C CNN
+F 3 "" H 3400 3400 50  0001 C CNN
+	1    3400 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F70B69B
+P 2300 2750
+F 0 "C?" H 2415 2796 50  0000 L CNN
+F 1 "1000u" H 2415 2705 50  0000 L CNN
+F 2 "" H 2338 2600 50  0001 C CNN
+F 3 "~" H 2300 2750 50  0001 C CNN
+	1    2300 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F70BAB0
+P 2300 2900
+F 0 "#PWR?" H 2300 2650 50  0001 C CNN
+F 1 "GND" H 2305 2727 50  0000 C CNN
+F 2 "" H 2300 2900 50  0001 C CNN
+F 3 "" H 2300 2900 50  0001 C CNN
+	1    2300 2900
+	1    0    0    -1  
+$EndComp
+Connection ~ 2300 2600
+Wire Wire Line
+	3800 2700 3800 2800
+Connection ~ 3800 2800
+Wire Wire Line
+	2300 2600 2900 2600
+$Comp
+L Device:R R?
+U 1 1 5F70CCC0
+P 4000 2600
+F 0 "R?" V 3793 2600 50  0000 C CNN
+F 1 "0.2" V 3884 2600 50  0000 C CNN
+F 2 "" V 3930 2600 50  0001 C CNN
+F 3 "~" H 4000 2600 50  0001 C CNN
+	1    4000 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 2600 3850 2600
+Wire Wire Line
+	3800 2800 4250 2800
+Wire Wire Line
+	4250 2200 2900 2200
+Wire Wire Line
+	2900 2200 2900 2600
+Connection ~ 2900 2600
+Wire Wire Line
+	2900 2600 3000 2600
+Wire Wire Line
+	4250 2200 4250 2600
+Wire Wire Line
+	4150 2600 4250 2600
+Connection ~ 4250 2600
+Wire Wire Line
+	4250 2600 4250 2800
+Wire Wire Line
+	3800 2600 3800 2100
+Wire Wire Line
+	3800 2100 4350 2100
+Connection ~ 3800 2600
+$Comp
+L Device:L L?
+U 1 1 5F70E6BC
+P 4500 2100
+F 0 "L?" V 4690 2100 50  0000 C CNN
+F 1 "230" V 4599 2100 50  0000 C CNN
+F 2 "" H 4500 2100 50  0001 C CNN
+F 3 "~" H 4500 2100 50  0001 C CNN
+	1    4500 2100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5F70F7B5
+P 4750 3000
+F 0 "D?" H 4750 3217 50  0000 C CNN
+F 1 "1N4148" H 4750 3126 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4750 2825 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4750 3000 50  0001 C CNN
+	1    4750 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3905 Q?
+U 1 1 5F7115F3
+P 4800 3300
+F 0 "Q?" H 4990 3254 50  0000 L CNN
+F 1 "2N3906" H 4990 3345 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5000 3225 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3905.pdf" H 4800 3300 50  0001 L CNN
+	1    4800 3300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4600 3000 4600 3300
+Connection ~ 4600 3000
+$Comp
+L Transistor_FET:IRF8302M Q?
+U 1 1 5F712FCE
+P 5200 3000
+F 0 "Q?" H 5404 3046 50  0000 L CNN
+F 1 "IRF840" H 5404 2955 50  0000 L CNN
+F 2 "Package_DirectFET:DirectFET_MX" H 5200 3000 50  0001 C CIN
+F 3 "https://www.infineon.com/dgdl/irf8302mpbf.pdf?fileId=5546d462533600a40153560d16e41d5b" H 5200 3000 50  0001 L CNN
+	1    5200 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D?
+U 1 1 5F7165BF
+P 5550 2100
+F 0 "D?" H 5550 1883 50  0000 C CNN
+F 1 "1N4007" H 5550 1974 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5550 1925 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5550 2100 50  0001 C CNN
+	1    5550 2100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F717A71
+P 6050 2600
+F 0 "R?" H 6120 2646 50  0000 L CNN
+F 1 "R" H 6120 2555 50  0000 L CNN
+F 2 "" V 5980 2600 50  0001 C CNN
+F 3 "~" H 6050 2600 50  0001 C CNN
+	1    6050 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F7181E4
+P 4200 3600
+F 0 "R?" H 4270 3646 50  0000 L CNN
+F 1 "R" H 4270 3555 50  0000 L CNN
+F 2 "" V 4130 3600 50  0001 C CNN
+F 3 "~" H 4200 3600 50  0001 C CNN
+	1    4200 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2100 6050 2450
+Wire Wire Line
+	4200 3750 4200 3900
+Wire Wire Line
+	6050 3900 6050 2750
+Wire Wire Line
+	4200 3100 4200 3450
+$Comp
+L Device:C C?
+U 1 1 5F71A96E
+P 3900 3600
+F 0 "C?" H 3785 3646 50  0000 R CNN
+F 1 "1n" H 3785 3555 50  0000 R CNN
+F 2 "" H 3938 3450 50  0001 C CNN
+F 3 "~" H 3900 3600 50  0001 C CNN
+	1    3900 3600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3900 6050 3900
+Wire Wire Line
+	3800 3100 3900 3100
+Wire Wire Line
+	3900 3100 3900 3450
+Connection ~ 3900 3100
+Wire Wire Line
+	3900 3100 4200 3100
+$Comp
+L power:GND #PWR?
+U 1 1 5F71E010
+P 3900 3750
+F 0 "#PWR?" H 3900 3500 50  0001 C CNN
+F 1 "GND" H 3905 3577 50  0000 C CNN
+F 2 "" H 3900 3750 50  0001 C CNN
+F 3 "" H 3900 3750 50  0001 C CNN
+	1    3900 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2100 6050 2100
+Connection ~ 6050 2100
+Wire Wire Line
+	6050 2100 6300 2100
+Wire Wire Line
+	2050 2600 2300 2600
+Text GLabel 2050 2600 0    50   Input ~ 0
+Vo
+Text GLabel 6300 2100 2    50   Input ~ 0
+питание_ин-12
+$Comp
+L Device:R R?
+U 1 1 5F70EDDC
+P 4600 3600
+F 0 "R?" V 4393 3600 50  0000 C CNN
+F 1 "10k" V 4484 3600 50  0000 C CNN
+F 2 "" V 4530 3600 50  0001 C CNN
+F 3 "~" H 4600 3600 50  0001 C CNN
+	1    4600 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3750 4900 3750
+Wire Wire Line
+	4650 2100 5300 2100
+Wire Wire Line
+	3800 3000 4600 3000
+Wire Wire Line
+	5300 2800 5300 2100
+Connection ~ 5300 2100
+Wire Wire Line
+	5300 2100 5400 2100
+Wire Wire Line
+	5000 3000 4900 3000
+Wire Wire Line
+	5300 3200 5300 3750
+Wire Wire Line
+	5300 3750 4900 3750
+Connection ~ 4900 3750
+Connection ~ 4600 3300
+Wire Wire Line
+	4600 3300 4600 3450
+Wire Wire Line
+	4900 3000 4900 3100
+Connection ~ 4900 3000
+Wire Wire Line
+	4900 3500 4900 3750
+$EndSCHEMATC
