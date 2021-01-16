@@ -1,0 +1,17 @@
+.\output\misc.o: source\std_periph_lib\misc.c
+.\output\misc.o: source\std_periph_lib\misc.h
+.\output\misc.o: .\source\config\stm32f10x.h
+.\output\misc.o: .\source\CMSIS\core_cm3.h
+.\output\misc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\output\misc.o: .\source\CMSIS\system_stm32f10x.h
+.\output\misc.o: .\source\config\stm32f10x_conf.h
+.\output\misc.o: .\source\std_periph_lib\stm32f10x_flash.h
+.\output\misc.o: .\source\config\stm32f10x.h
+.\output\misc.o: .\source\std_periph_lib\stm32f10x_gpio.h
+.\output\misc.o: .\source\std_periph_lib\stm32f10x_iwdg.h
+.\output\misc.o: .\source\std_periph_lib\stm32f10x_rcc.h
+.\output\misc.o: .\source\std_periph_lib\stm32f10x_rtc.h
+.\output\misc.o: .\source\std_periph_lib\stm32f10x_spi.h
+.\output\misc.o: .\source\std_periph_lib\stm32f10x_tim.h
+.\output\misc.o: .\source\std_periph_lib\stm32f10x_usart.h
+.\output\misc.o: .\source\std_periph_lib\misc.h
